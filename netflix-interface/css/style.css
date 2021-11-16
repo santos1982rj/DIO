@@ -1,0 +1,170 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* FONTS */
+@font-face {
+  font-family: 'Netflix Sans Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Regular'),
+    url('font/NetflixSansRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Netflix Sans Thin';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Thin'),
+    url('font/NetflixSansThin.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Netflix Sans Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Light'),
+    url('font/NetflixSansLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Netflix Sans Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Medium'),
+    url('font/NetflixSansMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Netflix Sans Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Bold'),
+    url('font/NetflixSansBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Netflix Sans Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Netflix Sans Black'),
+    url('font/NetflixSansBlack.woff') format('woff');
+}
+/* COLORS E FONTS*/
+:root {
+  --red-: #e50914;
+  --black-: #141414;
+  --gray-: #808080;
+  --grayLight-: #e5e5e5;
+  --white-: #ffffff;
+  --font-regular-: 'Netflix Sans Regular';
+  --font-thin-: 'Netflix Sans Thin';
+  --font-light-: 'Netflix Sans Light';
+  --font-medium-: 'Netflix Sans Medium';
+  --font-bold-: 'Netflix Sans Bold';
+  --font-black-: 'Netflix Sans Black';
+}
+
+/* STYLE GLOBAL */
+body {
+  background-color: var(--black-);
+  color: var(--white-);
+  font-family: var(--font-regular-);
+}
+
+/* HEADER STYLE */
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 82px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  gap: 50px;
+}
+header nav .logo {
+  width: 111px;
+  height: auto;
+}
+
+header nav ul {
+  justify-content: flex-start;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: var(--gray-);
+  font-family: var(--font-regular-);
+}
+header nav ul li a:hover {
+  color: var(--grayLight-);
+}
+.menu {
+  flex: 2;
+}
+.menu-user {
+  flex: 1;
+}
+/* MORE POPULAR STYLE */
+.more-popular {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 80px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/house-of-cards-cover.jpg) no-repeat top/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-bold-);
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.description {
+  font-family: var(--font-thin-);
+  margin-bottom: 4rem;
+  font-size: 26px;
+}
+
+.btn {
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--white-);
+  font-family: var(--font-medium--);
+  font-size: 22px;
+  cursor: pointer;
+  border: 0;
+  transition: 0.3s ease all;
+}
+
+.btn:hover {
+  background-color: var(--white-);
+  color: var(--black-);
+}
