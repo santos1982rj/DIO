@@ -1,0 +1,81 @@
+:root {
+  --bg-body: #fafafa;
+  --bg-box: #fff;
+  --bg-btn: #0095f6;
+  --link-color: #0095f6;
+  --color-face: #385185;
+  --text-color: #262626;
+}
+
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-color);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  max-width: 935px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smartphone {
+  background: url(../images/bg-smartphone.png) no-repeat;
+  flex-basis: 454px;
+  height: 618px;
+  background-size: 454px 618px;
+}
+.content {
+  width: 100%;
+  height: auto;
+  padding: 30px 0;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--bg-box);
+  gap: 30px;
+  border: 1px solid #ccc;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+.perfil {
+  width: 130px;
+  border-radius: 50% 50%;
+}
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 0;
+  background-color: var(--bg-btn);
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+p > a {
+  color: var(--link-color);
+  font-weight: bold;
+}
