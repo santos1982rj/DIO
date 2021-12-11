@@ -1,7 +1,7 @@
 :root {
   --bg-body: #fafafa;
   --bg-box: #fff;
-  --bg-btn: #0095f6;
+  --bg-btn: #0095f678;
   --link-color: #0095f6;
   --color-face: #385185;
   --text-color: #262626;
@@ -15,6 +15,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -22,60 +23,161 @@ body {
   color: var(--text-color);
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
   width: 100%;
-  height: auto;
-  max-width: 935px;
-
-  display: flex;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    'nav-left nav-right'
+    'footer footer';
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 
-.smartphone {
-  background: url(../images/bg-smartphone.png) no-repeat;
-  flex-basis: 454px;
-  height: 618px;
-  background-size: 454px 618px;
+.nav-left {
+  width: 420px;
+  height: 620px;
+  grid-area: nav-left;
 }
-.content {
-  width: 100%;
-  height: auto;
+
+.mobile {
+  background-image: url(../images/bg-smartphone.png);
+  min-width: 420px;
+  min-height: 618px;
+}
+.slide {
+  position: relative;
+  top: 100px;
+  left: 151px;
+}
+
+.nav-right {
+  width: 350px;
   padding: 30px 0;
-  max-width: 350px;
+  grid-area: nav-right;
+}
+
+.footer {
+  grid-area: footer;
+
+  width: 840px;
+
+  text-align: center;
+}
+
+.footer .links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+
+  margin: 30px 0;
+}
+
+.links li a {
+  padding: 10px;
+  line-height: 30px;
+  color: var(--text-color);
+}
+.box {
+  text-align: center;
+  padding: 20px;
   background-color: var(--bg-box);
-  gap: 30px;
-  border: 1px solid #ccc;
-}
-
-.logo {
-  width: 200px;
-  height: auto;
-}
-.perfil {
-  width: 130px;
-  border-radius: 50% 50%;
-}
-button {
-  padding: 10px 20px;
+  border: 1px solid #b6b6b6;
   border-radius: 5px;
-  border: 0;
-  background-color: var(--bg-btn);
-  color: #fff;
-  font-weight: 400;
-  cursor: pointer;
+  margin-bottom: 10px;
+}
+.logo {
+  width: 275px;
+}
+.form-login {
+  display: flex;
+  flex-direction: column;
 }
 
-p > a {
-  color: var(--link-color);
-  font-weight: bold;
+.form-login input {
+  height: 40px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  min-width: 200px;
+  background-color: var(--bg-body);
+  border: 1px solid #dbdbdb;
+  color: #8e8e8e;
+}
+
+.form-login button {
+  margin-top: 25px;
+  margin-bottom: 15px;
+
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-weight: 700;
+  min-width: 230px;
+
+  color: var(--bg-box);
+  background-color: var(--bg-btn);
+  border: 0;
+}
+
+.box .divider {
+  color: #8e8e8e;
+  font-size: 14px;
+}
+
+.box .divider::before {
+  content: '__________________';
+  padding: 10px;
+  position: relative;
+  top: -5px;
+}
+.box .divider::after {
+  content: '__________________';
+  padding: 10px;
+  position: relative;
+  top: -5px;
+}
+
+.login-social {
+  margin-top: 15px;
+}
+
+.login-social span {
+  display: block;
+  color: var(--color-face);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-social span img {
+  width: 14px;
+  position: relative;
+  bottom: -3px;
+}
+
+.login-social span:last-child {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.box .signUp {
+  font-size: 14px;
+}
+
+.box .signUp span {
+  color: var(--color-face);
+  font-weight: 700;
+}
+
+.appStore {
+  margin-top: 15px;
+  text-align: center;
+}
+.appStore img {
+  width: 136px;
+  margin-right: 5px;
+  margin-top: 15px;
 }
